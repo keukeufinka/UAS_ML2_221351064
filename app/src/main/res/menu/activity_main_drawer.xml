@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_about"
+            android:title="@string/menu_about" />
+        <item
+            android:id="@+id/nav_dataset"
+            android:icon="@drawable/ic_dataset"
+            android:title="@string/menu_dataset" />
+        <item
+            android:id="@+id/nav_fitur"
+            android:icon="@drawable/ic_fitur"
+            android:title="@string/menu_fitur" />
+        <item
+            android:id="@+id/nav_model"
+            android:icon="@drawable/ic_model"
+            android:title="@string/menu_model" />
+        <item
+            android:id="@+id/nav_simulasi"
+            android:icon="@drawable/ic_simulasi"
+            android:title="@string/menu_simulasi" />
+    </group>
+</menu>

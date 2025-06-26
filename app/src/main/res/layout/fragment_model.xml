@@ -1,0 +1,433 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8F8"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:divider="?android:attr/dividerHorizontal"
+        android:showDividers="middle"
+        android:dividerPadding="8dp">
+
+        <!-- Header -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_otak"
+                    android:contentDescription="Logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Stroke Prediction\n2025 - Machine Learning 2"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView utama untuk semua konten -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:backgroundTint="#FFFFFF"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Deskripsi Umum -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Model yang digunakan adalah Artificial Neural Network (ANN) dengan 3 hidden layer menggunakan TensorFlow dan Keras. Dataset yang digunakan berasal dari Kaggle Stroke Prediction. Model ini dikembangkan dan dilatih menggunakan Google Colab."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="#424242" />
+
+                <!-- 1. Data Preparation -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1. Data Preparation"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sebelum melatih model, data mentah dari dataset perlu dipersiapkan. Proses ini meliputi pembersihan data (data cleaning), encoding variabel kategorikal, normalisasi fitur numerik, dan pembagian data menjadi train dan test. Tahapan ini penting untuk memastikan model dapat belajar dari data dengan baik."
+                    android:layout_marginTop="4dp"
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="#424242" />
+
+                <!-- 1.1 Pisahkan fitur dan target -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🔹Pisahkan fitur dan target"
+                    android:textSize="18sp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:id="@+id/imageprepation2"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/preparation2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fitur dan target dipisahkan untuk mempersiapkan data sebelum pelatihan model. Fitur (X) mencakup karakteristik pasien, sedangkan target (y) berisi label stroke yang menunjukkan kondisi pasien"
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="#424242" />
+
+                <!-- 1.2 Encoding Target -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🔹Encoding Target target"
+                    android:textSize="18sp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:id="@+id/imageprepartion3"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/preparation3" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Target (stroke) diubah ke format numerik menggunakan LabelEncoder, meskipun pada kasus ini sudah berupa 0 dan 1, ini menjaga konsistensi"
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="#424242" />
+
+                <!-- 1.3 Normalisasi -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🔹Normalisasi"
+                    android:textSize="18sp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:id="@+id/imagepreparation4"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/preparatio4" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fitur numerik seperti usia, BMI, dan kadar glukosa dinormalisasi menggunakan MinMaxScaler agar nilai berada dalam rentang 0–1. Ini penting agar semua fitur memiliki kontribusi yang seimbang terhadap pelatihan model"
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="#424242" />
+
+                <!-- 1.4 Split Data -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🔹Split Data"
+                    android:textSize="18sp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:id="@+id/imgsplit"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/split" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dataset dibagi menjadi dua bagian: training dan testing. Data training digunakan untuk melatih model, sedangkan data testing digunakan untuk menguji performa model terhadap data yang belum pernah dilihat sebelumnya."
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="#424242" />
+
+                <!-- 2. Arsitektur Model -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2. Arsitektur Model"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:id="@+id/imagemodel"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/model" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Model ANN dibangun dengan 3 lapisan:\n- Input Layer: menyesuaikan jumlah fitur input\n- Hidden Layer 1: 16 neuron, aktivasi ReLU\n- Hidden Layer 2: 8 neuron, aktivasi ReLU\n- Output Layer: 1 neuron, aktivasi sigmoid untuk klasifikasi biner\nModel ini mampu belajar pola kompleks dari data kesehatan pasien."
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="#424242" />
+
+                <!-- 3. Compile -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🔹Compile"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/compile" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Model dikompilasi menggunakan optimizer Adam, loss function binary_crossentropy, dan metric akurasi. Proses ini menentukan bagaimana model belajar dari kesalahan."
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="#424242" />
+
+                <!-- 4. Train Model -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🔹Train Model"
+                    android:textSize="18sp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:id="@+id/imgModel1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/model2" />
+
+                <ImageView
+                    android:id="@+id/imgModel2"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/trainmodel" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Model dilatih selama 50 epoch dengan batch size 16. Proses ini memungkinkan model menyesuaikan bobot neuron berdasarkan data training untuk meminimalkan kesalahan prediksi."
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="#424242" />
+
+                <!-- 5. Evaluasi -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3. Evaluasi"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Setelah proses pelatihan selesai, model perlu diuji untuk mengetahui performanya pada data yang belum pernah dilihat sebelumnya (data test). Ini penting untuk mengevaluasi kemampuan model dalam melakukan generalisasi"
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="#424242" />
+
+                <!-- 5.1 Evaluasi pada data test -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🔹Evaluasi pada data test"
+                    android:textSize="18sp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:id="@+id/imageeva1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/eva1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📌 Penjelasan:\n\n• Fungsi model.evaluate() digunakan untuk mengukur performa model berdasarkan loss dan akurasi pada data test:\n• test_loss: Mengukur seberapa besar kesalahan prediksi model pada data test.\n• test_accuracy: Menunjukkan persentase prediksi benar dari model terhadap data test"
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="#424242" />
+
+                <!-- 5.2 Visualisasi Akurasi dan Loss -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🔹Visualisasi Akurasi dan Loss"
+                    android:textSize="18sp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:id="@+id/imageeva2"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/eva2" />
+
+                <ImageView
+                    android:id="@+id/imageeva3"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/eva3" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Visualisasi digunakan untuk memantau performa model selama proses pelatihan. Dalam kode, dua grafik utama dibuat menggunakan Matplotlib: grafik akurasi dan loss, masing-masing untuk data training dan validation."
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="#424242" />
+
+                <!-- 5.3 Confusion Matrix -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🔹Confusion Matrix"
+                    android:textSize="18sp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:id="@+id/imagematrix"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/confusion" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Matriks 2x2 yang menunjukkan jumlah prediksi benar dan salah untuk setiap kelas (stroke / tidak stroke). Divisualisasikan dengan heatmap agar mudah dibaca."
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="#424242" />
+
+                <!-- 6. Simulasi Model -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4. Simulasi Model"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:id="@+id/imagesimulasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/simulasi2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Simulasi model ini digunakan untuk memprediksi risiko stroke pada pasien berdasarkan data kesehatan mereka, seperti usia, jenis kelamin, BMI, tekanan darah, dan kadar glukosa.Model yang digunakan adalah Artificial Neural Network (ANN) yang telah dilatih sebelumnya, lalu diintegrasikan ke dalam aplikasi. Pengguna cukup memasukkan data pasien, dan sistem akan memberikan hasil prediksi apakah pasien berisiko stroke atau tidak."
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="#424242" />
+
+                <!-- 7. Simpan Model -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5. Simpan Model"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:id="@+id/imagesavemodel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/savemodel" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Setelah model selesai dan akurat, model dikonversi menjadi format TensorFlow Lite (TFLite). Format ini memungkinkan integrasi model ke dalam aplikasi mobile seperti Android agar dapat digunakan secara offline."
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="#424242" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

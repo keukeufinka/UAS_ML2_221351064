@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.uas_ml2_221351064.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.example.uas_ml2_221351064.ui.aboutapp.AboutFragment"
+        android:label="@string/menu_about"
+        tools:layout="@layout/fragment_about" />
+
+    <fragment
+        android:id="@+id/nav_dataset"
+        android:name="com.example.uas_ml2_221351064.ui.dataset.DatasetFragment"
+        android:label="@string/menu_dataset"
+        tools:layout="@layout/fragment_dataset" />
+
+    <fragment
+        android:id="@+id/nav_fitur"
+        android:name="com.example.uas_ml2_221351064.ui.fitur.FiturFragment"
+        android:label="@string/menu_fitur"
+        tools:layout="@layout/fragment_fitur" />
+
+    <fragment
+        android:id="@+id/nav_model"
+        android:name="com.example.uas_ml2_221351064.ui.model.ModelFragment"
+        android:label="@string/menu_model"
+        tools:layout="@layout/fragment_model" />
+
+
+    <fragment
+        android:id="@+id/nav_simulasi"
+        android:name="com.example.uas_ml2_221351064.ui.simulasi.SimulasiFragment"
+        android:label="@string/menu_simulasi"
+        tools:layout="@layout/fragment_simulasi" />
+
+</navigation>
